@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 //import InfiniteScroll from 'react-infinite-scroll-component';
 //import Nav from 'components/Nav';
-//import List from 'components/List';
+import List from 'components/List';
 //import Grid from 'components/Grid';
 //import Loader from 'components/Loader';
 //import { layouts, themes } from 'store/app/utils';
@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <Wrapper>
           <Title>Hacker News Reader</Title>
-          {/* <List /> */}
+          <List />
         </Wrapper>
       </div>
     </ThemeProvider>
