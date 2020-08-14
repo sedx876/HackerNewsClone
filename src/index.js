@@ -1,21 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import configureStore from './store/index';
 import App from './components/App/App';
 import GlobalStyles from './styles/globals';
-//import * as serviceWorker from './serviceWorker';
+//import loadInitialState from 'store/middleware/localStorageMiddleware/loadInitialState';
+//import registerServiceWorker from './registerServiceWorker';
 
 const renderApp = () => {
-  
+  //const initialState = loadInitialState();
+  //const store = configureStore(initialState);
+  const store = configureStore({});
 
-  
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('Initial state ->');
+    console.log(store.getState());
+  }
 
   ReactDOM.render(
-    
+    <Provider store={store}>
       <div>
         <GlobalStyles />
         <App />
-      </div>,
+      </div>
+    </Provider>,
     document.getElementById('root'),
   );
 };
