@@ -16,9 +16,9 @@ const ListItem = () => {
         <CommentLink href="#" rel={LINK_REL} target="_blank">
           Test User
         </CommentLink>{' '}
-        1 Hour Ago {'|'}
+        1 Hour Ago  {' | '}
         <CommentLink href="#" rel={LINK_REL} target="_blank">
-          42 Comments
+           42 Comments
         </CommentLink>
       </Description>
     </Item>
